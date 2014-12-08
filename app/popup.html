@@ -17,7 +17,13 @@
             <header>
               <h1>My Marks</h1>
             </header>
-            <section id="my_marks"></section>
+            <section id="my_marks">
+              <ul>
+                <li ng-repeat="mark in marks">
+                  <a target="_blank" ng-href="{{mark.url}}">{{mark.title}}</a>
+                </li>
+              </ul>
+            </section>
           </div>
         </div>
 
