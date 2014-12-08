@@ -33,7 +33,9 @@
         "styles/main.css"
       ],
       "js": [
-        "scripts/contentscript.js"
+        "scripts/contentscript.js",
+        "bower_components/jquery/jquery.min.js",
+        "scripts/inject.js"
       ],
       "run_at": "document_end",
       "all_frames": false
