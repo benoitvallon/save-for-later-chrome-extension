@@ -20,7 +20,8 @@
             <section id="my_marks">
               <ul>
                 <li ng-repeat="mark in marks">
-                  <a target="_blank" ng-href="{{mark.url}}">{{mark.title}}</a>
+                  <a ng-href="{{mark.url}}">{{mark.title}}</a>
+                  <span class="remove" ng-click="removeMark(mark.url)">remove</span>
                 </li>
               </ul>
             </section>
@@ -38,6 +39,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.controller.js"></script>
         <script src="scripts/directives/main.directive.js"></script>
+        <script src="scripts/helpers/storage.helper.js"></script>
+        <script src="scripts/services/storage.service.js"></script>
         <!-- endbuild -->
     </body>
 </html>
