@@ -1,45 +1,45 @@
 {
-  "name": "My Chrome Extension",
-  "version": "1.0.0",
-  "manifest_version": 2,
-  "description": "My Chrome Extension Description",
-  "icons": {
-    "16": "icons/icon-16.png",
-    "38": "icons/icon-38.png",
-    "128": "icons/icon-128.png"
-  },
-  "default_locale": "en",
-  "background": {
-    "scripts": [
-      "scripts/chromereload.js",
-      "scripts/helpers/storage.helper.js",
-      "scripts/background.js"
-    ]
-  },
-  "browser_action": {
-    "default_icon": {
-      "19": "icons/icon-19.png",
-      "38": "icons/icon-38.png"
+    "name": "My Chrome Extension",
+    "version": "1.0.1",
+    "manifest_version": 2,
+    "description": "My Chrome Extension Description",
+    "icons": {
+        "16": "icons/icon-16.png",
+        "38": "icons/icon-38.png",
+        "128": "icons/icon-128.png"
     },
-    "default_title": "save for later chrome extension",
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "css": [
-        "styles/main.css"
-      ],
-      "js": [
-        "scripts/contentscript.js",
-        "bower_components/jquery/jquery.min.js",
-        "scripts/inject.js"
-      ],
-      "run_at": "document_end",
-      "all_frames": false
-    }
-  ]
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/chromereload.js",
+            "scripts/helpers/storage.helper.js",
+            "scripts/background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "icons/icon-19.png",
+            "38": "icons/icon-38.png"
+        },
+        "default_title": "save for later chrome extension",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "css": [
+                "styles/main.css"
+            ],
+            "js": [
+                "scripts/contentscript.js",
+                "bower_components/jquery/jquery.min.js",
+                "scripts/inject.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ]
 }
