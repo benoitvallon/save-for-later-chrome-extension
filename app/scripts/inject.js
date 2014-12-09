@@ -7,7 +7,14 @@ $(document).ready(function() {
   $(document).on('click', '#markticle_button', function() {
     var title = document.title;
     var url = window.location.href;
-    console.log(title + ': ' + url);
+    chrome.extension.sendMessage({
+      action : 'add',
+      data: {
+        title: title,
+        url: url
+      }
+    });
+    alert('Marked!');
   });
   createMarkticleButton();
 });
