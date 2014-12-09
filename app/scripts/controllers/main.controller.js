@@ -1,4 +1,6 @@
-angular.module('markticle').controller('MainController', function($scope, StorageService) {
+angular.module('markticle').controller('MainController',
+    ['$scope', 'StorageService',
+    function($scope, StorageService) {
   $scope.marks = StorageService.get();
   $scope.removeMark = function(url) {
     StorageService.remove(url);
@@ -7,4 +9,4 @@ angular.module('markticle').controller('MainController', function($scope, Storag
       $scope.$apply();
     }
   };
-});
+}]);
